@@ -10,7 +10,7 @@ function Header() {
             <CssBaseline />
             <AppBar
                 position="static"
-                color="blue"
+                color="default"
                 elevation={0}
                 >
                 <ToolBar>
