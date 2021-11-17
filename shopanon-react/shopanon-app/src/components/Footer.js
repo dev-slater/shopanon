@@ -16,7 +16,7 @@ function Footer() {
         </Typography>
         </Grid>
         <Box>
-            <h1>TEST</h1>
+            <h1>Final Project Footer</h1>
         </Box>
     </Container>
 </React.Fragment>

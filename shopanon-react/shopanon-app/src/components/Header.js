@@ -17,6 +17,9 @@ function Header() {
                     <Typography variant="h6" color="inherit" noWrap>
                     ShopAnon!
                     </Typography>
+                    <Typography variant="h6" color="inherit" noWrap>
+                    Home
+                    </Typography>
                 </ToolBar>
             </AppBar>
         </React.Fragment> 
