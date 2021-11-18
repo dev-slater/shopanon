@@ -28,7 +28,6 @@ class ProductDetail(generics.RetrieveDestroyAPIView):
     pass
 
 class CartList(generics.ListCreateAPIView):
-    permission_classes = [DjangoModelPermissions]
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
     pass
