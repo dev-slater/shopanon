@@ -3,7 +3,7 @@ from main_app.models import Product
 from main_app.models import Cart
 from .serializers import ProductSerializer
 from .serializers import CartSerializer
-from rest_framework.permissions import IsAdminUser, DjangoModelPermissions, BasePermission
+from rest_framework.permissions import IsAdminUser, DjangoModelPermissions, BasePermission, SAFE_METHODS
 
 # Use this for cart permissions - not product 
 
@@ -28,12 +28,13 @@ class ProductDetail(generics.RetrieveDestroyAPIView):
     pass
 
 class CartList(generics.ListCreateAPIView):
-    permission_classes = [CartUserWritePermission]
+    permission_classes = [DjangoModelPermissions]
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
     pass
 
-class CartDetail(generics.RetrieveDestroyAPIView, CartUserWritePermission):
+class CartDetail(generics.RetrieveUpdateDestroyAPIView, CartUserWritePermission):
+    permission_classes = [CartUserWritePermission]
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
     pass
