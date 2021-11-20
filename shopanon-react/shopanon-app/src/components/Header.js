@@ -14,16 +14,17 @@ function Header() {
                 position="static"
                 color="default"
                 elevation={0}
+                style={{ background: '#ADD8E6' }}
                 >
-                <ToolBar>
+                <ToolBar >
                     <Typography variant="h6" color="inherit" noWrap>
-                        <Button component={NavLink}
+                        <Button component={NavLink} style={{ marginRight: 600 }}
                         to="/">
                         ShopAnon
                         </Button>
                         </Typography>
                         <Typography variant="h6" color="inherit" noWrap> 
-                        <Button component={NavLink}
+                        <Button component={NavLink} 
                         to="/register">
                         Sign-Up!
                         </Button> 

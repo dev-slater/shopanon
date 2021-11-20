@@ -24,7 +24,7 @@ const Products = (props) => {
                                         width={300} height={300} mode='limit'
                                     />
                                     <CardMedia/>
-                                    <CardContent>
+                                    <CardContent style={{ background: '#b0bec5' }}>
                                         <Typography
                                         gutterbottom
                                         variant="h6"

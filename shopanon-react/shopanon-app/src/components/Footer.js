@@ -19,7 +19,7 @@ function Footer() {
             <Button href="/admin" 
 						fullWidthmaxWidth="md"
 						variant="contained"
-						color="primary">
+						style={{ background: '#b0bec5' }}>
                 List View
             </Button>
         </Box>
