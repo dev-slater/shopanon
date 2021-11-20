@@ -1,9 +1,9 @@
-from rest_framework import generics
+from rest_framework import generics, permissions
 from main_app.models import Product
 from main_app.models import Cart
 from .serializers import ProductSerializer
 from .serializers import CartSerializer
-from rest_framework.permissions import IsAdminUser, DjangoModelPermissions, BasePermission, SAFE_METHODS
+from rest_framework.permissions import IsAdminUser, DjangoModelPermissions, BasePermission, SAFE_METHODS, IsAuthenticated
 
 # Use this for cart permissions - not product 
 
@@ -37,3 +37,23 @@ class CartDetail(generics.RetrieveUpdateDestroyAPIView, CartUserWritePermission)
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
     pass
+
+class CreateProduct(generics.CreateAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+class AdminProductDetail(generics.RetrieveAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    
+class UpdateProduct(generics.UpdateAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+class DeleteProduct(generics.RetrieveDestroyAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer

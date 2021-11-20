@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY="django-insecure-eu881x%(4m%y7g7#2$ia($k^jrh)jl&8lttuzhn"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 # modified for heroku
 ALLOWED_HOSTS = ["*"]
 #my api 
@@ -138,9 +138,9 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
         # 'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ],  
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (
+    #     'rest_framework_simplejwt.authentication.JWTAuthentication',
+    # )
 }
 
 CORS_ALLOWED_ORIGINS = [

@@ -10,8 +10,6 @@ function Footer() {
     <Container>
         <Grid>
         <Typography>
-       <h1>Filler Link</h1>
-            {/* Come back to this  */}
         </Typography>
         </Grid>
         <Box>
