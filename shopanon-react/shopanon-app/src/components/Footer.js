@@ -2,7 +2,6 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from "@material-ui/core/Typography";
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
 
 function Footer() {
@@ -11,7 +10,7 @@ function Footer() {
     <Container>
         <Grid>
         <Typography>
-       <Link href="/">TEST*******</Link>
+       <h1>Filler Link</h1>
             {/* Come back to this  */}
         </Typography>
         </Grid>
