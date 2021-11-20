@@ -21,7 +21,7 @@ function Admin() {
 
 	return (
 		<div className="App">
-			<h1>Product Admin View</h1>
+			<h1>Shopping List</h1>
 			<ProductLoading isLoading={appState.loading} products={appState.products} />
 		</div>
 	);

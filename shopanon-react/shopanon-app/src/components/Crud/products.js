@@ -24,7 +24,7 @@ const products = (props) => {
 						<Table stickyHeader aria-label="sticky table">
 							<TableHead>
 								<TableRow>
-									<TableCell>Id</TableCell>
+									<TableCell>Number</TableCell>
 									<TableCell align="left">Name</TableCell>
 									<TableCell align="left">Price</TableCell>
 									<TableCell align="left">Description</TableCell>

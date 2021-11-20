@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axiosInstance from '../../api';
 import { useNavigate } from 'react-router-dom';
-//MaterialUI
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -41,6 +40,7 @@ export default function Create() {
 		price: '',
 		description: '',
         image:'',
+        favorite:'',
 	});
 
 	const [formData, updateFormData] = useState(initialFormData);
@@ -64,6 +64,7 @@ export default function Create() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+       console.log(formData);
 		axiosInstance
 			.post(`admin/create/`, {
 				name: formData.name,
@@ -71,7 +72,7 @@ export default function Create() {
 				price: formData.price,
 				description: formData.description,
 				image: formData.image,
-                favorite: formData.favorite
+                favorite: formData.favorite,
 			})
 			.then((res) => {
 				history('/admin/');
@@ -102,6 +103,7 @@ export default function Create() {
 						</Grid>
 						<Grid item xs={12}>
 							<TextField
+                                type= "number"
 								variant="outlined"
 								required
 								fullWidth
@@ -110,8 +112,6 @@ export default function Create() {
 								name="price"
 								autoComplete="price"
 								onChange={handleChange}
-								multiline
-								rows={1}
 							/>
 						</Grid>
 						<Grid item xs={12}>
@@ -151,8 +151,6 @@ export default function Create() {
 								name="image"
 								autoComplete="image"
 								onChange={handleChange}
-								multiline
-								rows={4}
 							/>
 						</Grid>
                         <Grid item xs={12}>
@@ -165,12 +163,10 @@ export default function Create() {
 								name="favorite"
 								autoComplete="favorite"
 								onChange={handleChange}
-								multiline
-								rows={4}
 							/> */}
                             <FormControlLabel
 						control={<Checkbox value="favorite" color="primary" />}
-						label="Favorite" onChange={handleChange} id="favorite"
+						label="favorite" onChange={handleChange} id="favorite"
 					/>
 						</Grid>
 					</Grid>

@@ -25,8 +25,7 @@ SECRET_KEY="django-insecure-eu881x%(4m%y7g7#2$ia($k^jrh)jl&8lttuzhn"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-# modified for heroku
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 #my api 
 
 # Application definition
@@ -138,13 +137,13 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny',
         # 'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ],  
-    # 'DEFAULT_AUTHENTICATION_CLASSES': (
-    #     'rest_framework_simplejwt.authentication.JWTAuthentication',
-    # )
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "http://localhost:3000"
 ]
 
 # Abstract User Model 
@@ -152,7 +151,7 @@ CORS_ALLOWED_ORIGINS = [
 AUTH_USER_MODEL = "users.NewUser"
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=500),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': False,
     'BLACKLIST_AFTER_ROTATION': True,

@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import Typography from "@material-ui/core/Typography";
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
-import Link from '@material-ui/core/link';
+import Button from '@material-ui/core/Button';
 
 function Footer() {
     return (
@@ -11,12 +11,17 @@ function Footer() {
     <Container>
         <Grid>
         <Typography>
+        <h1></h1>
+        <br></br>
         </Typography>
         </Grid>
         <Box>
-            <Link href="/admin">
+            <Button href="/admin" 
+						fullWidthmaxWidth="md"
+						variant="contained"
+						color="primary">
                 List View
-            </Link>
+            </Button>
         </Box>
     </Container>
 </React.Fragment>
