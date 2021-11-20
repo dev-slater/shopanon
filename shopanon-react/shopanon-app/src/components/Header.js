@@ -22,7 +22,7 @@ function Header() {
                         ShopAnon
                         </Button>
                         </Typography>
-                        <Typography variant="h6" color="inherit" noWrap>
+                        <Typography variant="h6" color="inherit" noWrap> 
                         <Button component={NavLink}
                         to="/register">
                         Sign-Up!
