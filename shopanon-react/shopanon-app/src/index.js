@@ -9,6 +9,11 @@ import Footer from './components/Footer';
 import Register from './components/register';
 import Login from './components/login';
 import Logout from './components/logout';
+import Create from './components/Crud/create';
+import Edit from './components/Crud/edit';
+import Delete from './components/Crud/delete';
+import Admin from './Admin';
+
 
 
 const rootElement = document.getElementById("root");
@@ -22,6 +27,10 @@ render(
         <Route exact path="/register" element={<Register/>} />
         <Route exact path="/login" element={<Login/>}/>
         <Route exact path="/logout" element={<Logout/>}/>
+        <Route exact path="/admin" element={<Admin/>}/>
+        <Route exact path="/admin/create" element={<Create/>}/>
+        <Route exact path="/admin/edit/:id" element={<Edit/>}/>
+        <Route exact path="/admin/delete/:id" element={<Delete/>}/>
     </Routes>  
       <Footer />
     </React.StrictMode>
