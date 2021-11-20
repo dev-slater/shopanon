@@ -5,7 +5,6 @@ import './index.css';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import Register from './components/register';
 import Login from './components/login';
 import Logout from './components/logout';
@@ -32,7 +31,6 @@ render(
         <Route exact path="/admin/edit/:id" element={<Edit/>}/>
         <Route exact path="/admin/delete/:id" element={<Delete/>}/>
     </Routes>  
-      <Footer />
     </React.StrictMode>
   </Router>, rootElement
 );

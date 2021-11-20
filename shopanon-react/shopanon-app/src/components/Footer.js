@@ -20,7 +20,7 @@ function Footer() {
 						fullWidthmaxWidth="md"
 						variant="contained"
 						style={{ background: '#b0bec5' }}>
-                List View
+                Edit Shopping List
             </Button>
         </Box>
     </Container>

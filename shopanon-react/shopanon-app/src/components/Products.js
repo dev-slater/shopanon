@@ -5,6 +5,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import Footer from '../components/Footer';
 
 const Products = (props) => {
     const { products } = props;
@@ -47,6 +48,7 @@ const Products = (props) => {
 
                         </Grid>
                     </Container>
+                    <Footer />
                 </React.Fragment> 
     
     )
