@@ -22,14 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
-# SECRET_KEY="django-insecure-eu881x%(4m%y7g7#2$ia($k^jrh)jl&8lttuzhnv&%!d=bx*z$"
-
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
 DEBUG = False
 # modified for heroku
-ALLOWED_HOSTS = ['shopanon.herokuapp.com', '127.0.0.1:8000', 'localhost']
+ALLOWED_HOSTS = ["*"]
 #my api 
 
 # Application definition
